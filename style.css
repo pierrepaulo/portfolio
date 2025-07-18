@@ -294,3 +294,65 @@ nav ul li a {
 .skills-float span {
   font-weight: 500;
 }
+
+.projects-section {
+  padding: 100px 20px;
+  background-color: #f9fafc;
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 16px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.project-card a:hover {
+  background-color: #2563eb;
+}

@@ -56,6 +56,65 @@ nav ul li a {
   font-size: 18px;
 }
 
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background-color: #cbd5e1;
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.theme-switch input:checked + .slider::before {
+  transform: translateX(28px);
+}
+
+.theme-switch .moon-icon,
+.theme-switch .sun-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #1e293b;
+  pointer-events: none;
+}
+
+.theme-switch .moon-icon {
+  left: 8px;
+}
+
+.theme-switch .sun-icon {
+  right: 8px;
+}
+
 /* AJUSTE PARA NÃO FICAR ESCONDIDO SOB O HEADER */
 .hero {
   display: flex;
@@ -395,4 +454,77 @@ nav ul li a {
 
 .contact-form button:hover {
   background-color: #1ebe5d;
+}
+
+/* dark mode */
+body.dark-mode {
+  background-color: #0f172a;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .hero {
+  color: white;
+}
+
+body.dark-mode .hero .left h1,
+body.dark-mode .hero .left h2,
+body.dark-mode .hero .left p {
+  color: white;
+}
+
+body.dark-mode .about-section {
+  color: white;
+}
+
+body.dark-mode .about-text {
+  color: white;
+}
+
+body.dark-mode .projects-section {
+  background-color: #0f172a;
+  color: white;
+}
+
+body.dark-mode .project-card {
+  background-color: #1e293b;
+  color: white;
+}
+body.dark-mode .skills-section,
+body.dark-mode .skills-showcase,
+body.dark-mode .contact-section {
+  background-color: #0f172a;
+  color: white;
+}
+
+body.dark-mode .card {
+  background-color: #1e293b;
+  color: white;
+}
+
+body.dark-mode .card p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .project-card h3,
+body.dark-mode .project-card p {
+  color: white;
+}
+
+body.dark-mode .skills-icons i {
+  color: #60a5fa;
+}
+
+body.dark-mode .skills-float {
+  color: #94a3b8;
+  opacity: 0.8;
+}
+
+body.dark-mode .contact-form textarea {
+  background-color: #1e293b;
+  color: white;
+  border: 2px solid #334155;
+}
+
+body.dark-mode .contact-form textarea::placeholder {
+  color: #94a3b8;
 }

@@ -10,3 +10,12 @@ function sendToWhatsApp() {
   )}`;
   window.open(url, "_blank");
 }
+
+const toggleInput = document.getElementById("theme-toggle");
+const body = document.body;
+
+toggleInput.checked = body.classList.contains("dark-mode");
+
+toggleInput.addEventListener("change", () => {
+  body.classList.toggle("dark-mode");
+});

@@ -19,3 +19,11 @@ toggleInput.checked = body.classList.contains("dark-mode");
 toggleInput.addEventListener("change", () => {
   body.classList.toggle("dark-mode");
 });
+
+// Menu hamburguer toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navList = document.getElementById("nav-list");
+
+menuToggle.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});

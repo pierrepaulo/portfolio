@@ -16,7 +16,7 @@ body {
 
 /* HEADER FIXO NO TOPO */
 header {
-  position: fixed; /* <-- Mantém fixo */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -28,7 +28,9 @@ header {
   background: white;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
-
+.hero {
+  padding-top: 120px;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -113,15 +115,6 @@ nav ul li a {
 
 .theme-switch .sun-icon {
   right: 8px;
-}
-
-/* AJUSTE PARA NÃO FICAR ESCONDIDO SOB O HEADER */
-.hero {
-  display: flex;
-  padding: 140px 60px 80px;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 80vh;
 }
 
 .left {
@@ -456,58 +449,44 @@ nav ul li a {
   background-color: #1ebe5d;
 }
 
-/* dark mode */
+/* DARK MODE */
 body.dark-mode {
   background-color: #0f172a;
+  color: white;
   transition: background-color 0.3s ease;
 }
 
-body.dark-mode .hero {
-  color: white;
-}
-
+body.dark-mode .hero,
 body.dark-mode .hero .left h1,
 body.dark-mode .hero .left h2,
-body.dark-mode .hero .left p {
+body.dark-mode .hero .left p,
+body.dark-mode .about-section,
+body.dark-mode .about-text,
+body.dark-mode .projects-section,
+body.dark-mode .project-card h3,
+body.dark-mode .project-card p,
+body.dark-mode .skills-section,
+body.dark-mode .skills-showcase,
+body.dark-mode .contact-section,
+body.dark-mode .card {
   color: white;
 }
 
-body.dark-mode .about-section {
-  color: white;
-}
-
-body.dark-mode .about-text {
-  color: white;
-}
-
-body.dark-mode .projects-section {
-  background-color: #0f172a;
-  color: white;
-}
-
-body.dark-mode .project-card {
-  background-color: #1e293b;
-  color: white;
-}
+body.dark-mode .projects-section,
 body.dark-mode .skills-section,
 body.dark-mode .skills-showcase,
 body.dark-mode .contact-section {
   background-color: #0f172a;
-  color: white;
 }
 
-body.dark-mode .card {
+body.dark-mode .card,
+body.dark-mode .project-card,
+body.dark-mode .contact-form textarea {
   background-color: #1e293b;
-  color: white;
 }
 
 body.dark-mode .card p {
   color: #cbd5e1;
-}
-
-body.dark-mode .project-card h3,
-body.dark-mode .project-card p {
-  color: white;
 }
 
 body.dark-mode .skills-icons i {
@@ -520,11 +499,98 @@ body.dark-mode .skills-float {
 }
 
 body.dark-mode .contact-form textarea {
-  background-color: #1e293b;
-  color: white;
   border: 2px solid #334155;
 }
 
 body.dark-mode .contact-form textarea::placeholder {
   color: #94a3b8;
+}
+/* MENU HAMBURGUER */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1e293b;
+  margin-left: auto;
+}
+/* RESPONSIVO */
+
+@media screen and (min-width: 1025px) {
+  .hero {
+    padding: 140px 60px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: calc(80px + 20px);
+  }
+  .right {
+    margin-top: 30px;
+    max-width: 90%;
+  }
+  nav ul {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: calc(80px + 20px);
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-content,
+  .about-text {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skills-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 40px;
+  }
+  .project-card,
+  .card {
+    width: 90%;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background: white;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    border-radius: 8px;
+  }
+  .nav-list.active {
+    display: flex;
+  }
+  .nav-list li a {
+    font-size: 18px;
+  }
+  nav ul {
+    gap: 0;
+  }
+  .about-section {
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }

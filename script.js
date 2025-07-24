@@ -27,3 +27,21 @@ const navList = document.getElementById("nav-list");
 menuToggle.addEventListener("click", () => {
   navList.classList.toggle("active");
 });
+
+// scrol suave
+
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+  const triggerBottom = window.innerHeight * 0.85;
+
+  reveals.forEach((el) => {
+    const boxTop = el.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);

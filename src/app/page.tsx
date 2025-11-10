@@ -13,9 +13,9 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <main className="mx-auto flex flex-col w-full max-w-6xl gap-12 px-6 pb-16 pt-28 lg:grid lg:grid-cols-3 lg:gap-10 lg:px-12 lg:pt-32">
+      <main className="mx-auto flex flex-col w-full max-w-6xl gap-12 px-6 pb-16 pt-28 lg:grid lg:grid-cols-3 lg:gap-10 lg:px-12 lg:pt-24">
         <aside className="lg:col-span-1">
-          <div className="sticky top-8">
+          <div className="sticky top-6">
             <ProfileCard />
           </div>
         </aside>
@@ -25,8 +25,8 @@ export default function Home() {
           <ProjectsSection />
           <Contact />
         </section>
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

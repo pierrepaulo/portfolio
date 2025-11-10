@@ -20,7 +20,7 @@ export function SectionContainer({
         <span className="text-primary uppercase tracking-[0.5em]">{label}</span>
       </div>
 
-      <div className="group bg-card/80 rounded-2xl border border-transparent hover:border-primary transition-colors duration-300 ease-out">
+      <div className="group bg-card/80 rounded-2xl border border-white/10 hover:border-primary transition-colors duration-300 ease-out">
         <div className="space-y-6 p-8">
           <h2 className="text-3xl font-semibold">{title}</h2>
           <div className="">{children}</div>

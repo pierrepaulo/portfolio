@@ -7,10 +7,10 @@ import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { id: "about", label: "About" },
+  { id: "about", label: "Sobre" },
   { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+  { id: "projects", label: "Projetos" },
+  { id: "contact", label: "Contato" },
 ] as const;
 
 export const Header = () => {
@@ -23,9 +23,9 @@ export const Header = () => {
     event.preventDefault();
     setIsMenuOpen(false);
 
-    const prefersReducedMotion = window
-      .matchMedia("(prefers-reduced-motion: reduce)")
-      .matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     const section = document.getElementById(sectionId);
 
     if (!section) {

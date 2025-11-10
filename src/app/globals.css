@@ -43,9 +43,9 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #131b2c;
+  --background: #0a1224;
   --foreground: #edf1fa;
-  --card: #0a1224;
+  --card: #131b2c;
   --card-foreground: #edf1fa;
   --muted-foreground: #a7b0c2;
   --primary: #155dfc;
